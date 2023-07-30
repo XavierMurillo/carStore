@@ -1,0 +1,222 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+header {
+  grid-area: header;
+  background-color: rgb(11, 89, 157);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.page-title {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+}
+.page-title svg {
+  width: 15%;
+}
+.selector {
+  grid-area: selector;
+  background-color: rgb(228, 228, 228);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main {
+  grid-area: main;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+footer {
+  grid-area: footer;
+  background-color: rgb(5, 5, 62);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.grid-container {
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "selector"
+    "main"
+    "footer";
+  grid-template-rows: 1fr 1fr 7fr 1fr;
+}
+.selector-value {
+  width: 70%;
+  height: 40%;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.selector p {
+  font-size: 1.3rem;
+  margin-top: 2%;
+}
+.card-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  margin-bottom: 5%;
+  height: 50vh;
+}
+.card-container img {
+  margin-top: 20%;
+  height: 70%;
+}
+.grid-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-container p {
+  font-size: 2rem;
+}
+.card-container button {
+  width: 40%;
+  height: 3.5rem;
+  font-size: 1.5rem;
+  background-color: rgb(11, 89, 157);
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 5%;
+}
+footer p {
+  font-size: 1.7rem;
+  color: white;
+}
+.footer-icons {
+  margin-top: 5%;
+  display: flex;
+  width: 15%;
+  fill: white;
+}
+header p {
+  color: white;
+  margin-left: 3%;
+  font-size: 1.1rem;
+}
+header svg {
+  fill: white;
+  width: 7%;
+  margin-left: 5%;
+  margin-right: 2%;
+}
+.car-icon {
+  height: 3rem;
+}
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+.nav-buttons button {
+  width: 10%;
+  height: 4rem;
+  margin-top: 5%;
+  font-size: 2rem;
+  color: rgb(51, 97, 222);
+  background-color: white;
+  border: none;
+}
+.nav-buttons button:hover {
+  color: gray;
+}
+.nav-buttons button svg {
+  fill: rgb(51, 97, 222);
+  width: 100%;
+}
+.nav-buttons button svg:hover {
+  fill: gray;
+}
+.cards {
+  height: 51vh;
+  width: 90vw;
+  overflow-y: scroll;
+}
+.menu-options {
+  display: none;
+}
+/* CSS para desktop */
+@media (min-width: 576px) {
+  .grid-container {
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+      "header selector"
+      "header main"
+      "footer main";
+    grid-template-columns: 1.5fr 8.5fr;
+    grid-template-rows: 1fr 7.5fr 1.5fr;
+  }
+  .cards {
+    width: 80vw;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+  }
+  .menu-options {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    font-size: 1.2rem;
+  }
+  .menu-options p {
+    margin-bottom: 20%;
+  }
+  .nav-buttons {
+    margin-top: 0;
+  }
+  .card-container {
+    width: 19vw;
+    height: 50vh;
+  }
+  .card-container p {
+    font-size: 2rem;
+  }
+  .card-container button {
+    font-size: 1rem;
+    height: 3rem;
+  }
+  .selector select {
+    width: 75vw;
+    margin-bottom: 1%;
+  }
+  .selector p {
+    margin-top: 1%;
+    font-size: 2rem;
+  }
+  header {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  header p {
+    font-size: 1rem;
+  }
+  .footer-icons {
+    width: 30%;
+  }
+  footer p {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .menu-icon {
+    display: none;
+  }
+  .page-title {
+    display: flex;
+    font-size: 1.2rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+  }
+}
